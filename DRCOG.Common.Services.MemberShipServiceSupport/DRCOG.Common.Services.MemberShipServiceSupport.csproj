@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2564A894-4BB4-4BAB-A63B-CD931A9BF569}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DRCOG.Common.Services.MemberShipServiceSupport</RootNamespace>
+    <AssemblyName>DRCOG.Common.Services.MemberShipServiceSupport</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountMembershipService.cs" />
+    <Compile Include="ApplicationStateBase.cs" />
+    <Compile Include="Domain\ContextWrapper.cs" />
+    <Compile Include="Domain\PasswordResetResult.cs" />
+    <Compile Include="Domain\ServiceResponses.cs" />
+    <Compile Include="Domain\UserRole.cs" />
+    <Compile Include="Helpers\UserName.cs" />
+    <Compile Include="Interfaces\IProviderFactory.cs" />
+    <Compile Include="ServiceInterfaces\IRoleService.cs" />
+    <Compile Include="RoleProviderFactory.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="Domain\MembershipProfile.cs" />
+    <Compile Include="Domain\Search\CriteriaSearchSpecification.cs" />
+    <Compile Include="Domain\Search\CriteriaSearchSpecificationSettings.cs" />
+    <Compile Include="Domain\Search\ISearchSpecification.cs" />
+    <Compile Include="Domain\Search\SearchCriteria.cs" />
+    <Compile Include="Exceptions\Exceptions.cs" />
+    <Compile Include="Interfaces\ISSOFederation.cs" />
+    <Compile Include="MembershipProviderFactory.cs" />
+    <Compile Include="ProfileChangeService.cs" />
+    <Compile Include="DataInterfaces\IUserRepository.cs" />
+    <Compile Include="Domain\MembershipApplication.cs" />
+    <Compile Include="FormsAuthenticationService.cs" />
+    <Compile Include="Interfaces\ICriteriaSearchSpecificationSettings.cs" />
+    <Compile Include="RoleService.cs" />
+    <Compile Include="ServiceInterfaces\ISSO.cs" />
+    <Compile Include="ServiceInterfaces\IFormsAuthenticationService.cs" />
+    <Compile Include="ServiceInterfaces\IGlobalUserService.cs" />
+    <Compile Include="ServiceInterfaces\IMembershipService.cs" />
+    <Compile Include="ServiceInterfaces\IProfileService.cs" />
+    <Compile Include="Profile.cs" />
+    <Compile Include="DRCOGProfileProvider.cs" />
+    <Compile Include="MemberProfile.cs" />
+    <Compile Include="ProfileProperty.cs" />
+    <Compile Include="ProfilePropertyValue.cs" />
+    <Compile Include="ProfileService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserRoleBase.cs" />
+    <Compile Include="Validation\AccountValidation.cs" />
+    <Compile Include="Validation\Attributes\PropertiesMustMatchAttribute.cs" />
+    <Compile Include="Validation\Attributes\ValidatePasswordLengthAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DRCOG.Common.Services.ChangeTrackerSupport\DRCOG.Common.Services.ChangeTrackerSupport.csproj">
+      <Project>{8487C2E8-A957-4754-8D62-739B70252723}</Project>
+      <Name>DRCOG.Common.Services.ChangeTrackerSupport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DRCOG.Common.Services.QueueSupport\DRCOG.Common.Services.QueueSupport.csproj">
+      <Project>{CA7495A0-1BBA-44CD-90BC-C9D018D4A44B}</Project>
+      <Name>DRCOG.Common.Services.QueueSupport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DRCOG.Common\DRCOG.Common.csproj">
+      <Project>{4E600512-70D6-49BB-9011-8AB788F9BA5F}</Project>
+      <Name>DRCOG.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
